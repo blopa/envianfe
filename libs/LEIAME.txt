@@ -11,9 +11,9 @@ BAIXE AS BIBLIOTECAS NFEPHP E SWIFTMAILER PARA QUE FUNCIONE CORRETAMENTE
 // FALTA FAZER
 // -> Adicionar Envio de Multiplos Arquivos - OK
 // -> Enviar email em HTML - OK, mas sem imagens
-// -> Login / Autenticação / Só aceitar do meu CNPJ - Pendente
+// -> Login / AutenticaÃ§Ã£o / SÃ³ aceitar do meu CNPJ - Pendente
 
 ?>
 
-swift/ <- diretório 'libs' do swift
-libs/ <- diretório 'libs' do nfephp
+swift/ <- diretÃ³rio 'libs' do swift
+libs/ <- diretÃ³rio 'libs' do nfephp

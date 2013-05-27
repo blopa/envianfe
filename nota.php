@@ -9,7 +9,7 @@
 // FALTA FAZER
 // -> Adicionar Envio de Multiplos Arquivos - OK
 // -> Enviar email em HTML - OK, mas sem imagens
-// -> Login / AutenticaÁ„o / SÛ aceitar do meu CNPJ - Pendente
+// -> Login / Autentica√ß√£o / S√≥ aceitar do meu CNPJ - Pendente
 
 ?>
 
@@ -33,21 +33,21 @@ foreach ($_FILES["nota"]['tmp_name'] as $key => $nota) // Pegando cada XML envia
 	}
 	$url = $id . '.pdf';
 	
-	// Como n„o consegui ler o XML com o SimplesXML, aqui faz a busca pelo email do cliente no conteudo do XML
+	// Como n√£o consegui ler o XML com o SimplesXML, aqui faz a busca pelo email do cliente no conteudo do XML
 	$xml = (string)$docxml;
 	$pattern = '/([A-Za-z0-9\.\-\_\!\#\$\%\&\'\*\+\/\=\?\^\`\{\|\}]+)\@([A-Za-z0-9.-_]+)(\.[A-Za-z]{2,5})/';
 	preg_match_all($pattern,$xml,$emails);
 	$new_emails = array_unique($emails[0]);
 	foreach ($new_emails as $mkey => $val)
 	{
-		  echo 'O email ser· enviado para ' . $val;
+		  echo 'O email ser√° enviado para ' . $val;
 		  echo '<br>...<br><br>';
 	}
 	// Fim da busca
 	
 	$cliente = (string)$val;
 
-	$mailer = new Swift_Mailer(new Swift_MailTransport()); // Cria a inst‚ncia do SwiftMailer
+	$mailer = new Swift_Mailer(new Swift_MailTransport()); // Cria a inst√¢ncia do SwiftMailer
 
 	$message = Swift_Message::newInstance()
 				   ->setSubject('Assunto do Email') // Assunto do email
@@ -60,7 +60,7 @@ foreach ($_FILES["nota"]['tmp_name'] as $key => $nota) // Pegando cada XML envia
 				   ->setFrom(array('remetente@site.com.br' => 'Nome Remetente')) // From:
 				   ->setBody("
 								<p><strong>Prezado cliente</strong>,<br/>
-								aqui vai sua mensagem pro cliente em HTML (porÈm a tag <img> n„o funciona).", 'text/html'
+								aqui vai sua mensagem pro cliente em HTML (por√©m a tag <img> n√£o funciona).", 'text/html'
 							) // Body message
 				   ->attach(Swift_Attachment::newInstance($teste, 'nomedanota.pdf', 'application/pdf')) // Anexa a nota em PDF
 				   ->attach(Swift_Attachment::newInstance($docxml, 'nomedanota.xml', 'application/xml')); // Anexa o XML

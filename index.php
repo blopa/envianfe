@@ -9,7 +9,7 @@
 // FALTA FAZER
 // -> Adicionar Envio de Multiplos Arquivos - OK
 // -> Enviar email em HTML - OK, mas sem imagens
-// -> Login / Autenticação / Só aceitar do meu CNPJ - Pendente
+// -> Login / AutenticaÃ§Ã£o / SÃ³ aceitar do meu CNPJ - Pendente
 
 ?>
 
