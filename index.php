@@ -1,5 +1,5 @@
 <?php
-// @autor Pablo Montenegro - montenegro.pablo@outlook.com
+// @autor Pablo Montenegro
 // Utiliza as APIs SwiftMailer e NFePHP
 // 		-> http://www.nfephp.org/
 //		-> http://swiftmailer.org/
