@@ -10,6 +10,7 @@ Selecione 1 ou varios XML, clique em enviar e aguarde, os e-mails serão enviado
 Baseado nos tutoriais:
 
 http://www.brunoafonso.net/codigo-php-para-gerar-a-danfe/
+
 http://coreyworrell.com/blog/article/php-html-email-pdf-attachment
 	
 Enjoy o/
